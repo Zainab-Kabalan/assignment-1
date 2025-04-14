@@ -1,0 +1,1 @@
+const directions = ['Vertical', 'Horizontal', 'right-left', 'left-right'];

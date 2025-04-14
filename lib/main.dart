@@ -8,15 +8,15 @@ void main(
   runApp(
     MaterialApp(
       home:
-          directionsgobrrrrr(),
+          directionschange(),
     ),
   );
 }
 
-class directionsgobrrrrr
+class directionschange
     extends
         StatefulWidget {
-  const directionsgobrrrrr({
+  const directionschange({
     super.key,
   });
   @override
@@ -24,14 +24,14 @@ class directionsgobrrrrr
     StatefulWidget
   >
   createState() {
-    return _directiongo();
+    return _directionschange();
   }
 }
 
-class _directiongo
+class _directionschange
     extends
         State<
-          directionsgobrrrrr
+          directionschange
         > {
   Alignment
   directb =

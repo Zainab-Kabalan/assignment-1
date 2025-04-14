@@ -50,24 +50,18 @@ class _directiongo
   int color4 = 0;
   void colorset() {
     setState(() {
-      color2 =
-          Random()
-              .nextInt(
-                250,
-              ) +
-          6;
-      color3 =
-          Random()
-              .nextInt(
-                250,
-              ) +
-          6;
-      color4 =
-          Random()
-              .nextInt(
-                250,
-              ) +
-          6;
+      color2 = Random()
+          .nextInt(
+            256,
+          );
+      color3 = Random()
+          .nextInt(
+            256,
+          );
+      color4 = Random()
+          .nextInt(
+            256,
+          );
     });
   }
 
@@ -117,9 +111,9 @@ class _directiongo
               ),
               Color.fromARGB(
                 255,
-                255,
-                255,
-                255,
+                216,
+                213,
+                213,
               ),
               Color.fromARGB(
                 255,
@@ -134,6 +128,8 @@ class _directiongo
           child: Column(
             mainAxisSize:
                 MainAxisSize.min,
+            crossAxisAlignment:
+                CrossAxisAlignment.center,
             children: [
               OutlinedButton(
                 onPressed:
@@ -156,6 +152,17 @@ class _directiongo
                   ),
                 ),
               ),
+              SizedBox(
+                height:
+                    10,
+              ),
+              Text(
+                "\t Red: $color2 \t Green: $color3 \t Blue: $color4",
+              ),
+              SizedBox(
+                height:
+                    50,
+              ),
               OutlinedButton(
                 onPressed:
                     setdirection,
@@ -176,6 +183,11 @@ class _directiongo
                     ),
                   ),
                 ),
+              ),
+
+              SizedBox(
+                height:
+                    10,
               ),
               Text(
                 " Alignment : $cdirection.",

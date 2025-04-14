@@ -45,44 +45,11 @@ class _directiongo
   cdirection =
       'Vertical';
   int rand = 0;
-  int color1 = 0;
   int color2 = 0;
   int color3 = 0;
   int color4 = 0;
-  final mapdirections = {
-    'Vertical': [
-      Alignment
-          .centerLeft,
-      Alignment
-          .centerRight,
-    ],
-    'Horizontal': [
-      Alignment
-          .bottomCenter,
-      Alignment
-          .topCenter,
-    ],
-    'right-left': [
-      Alignment
-          .bottomLeft,
-      Alignment
-          .topRight,
-    ],
-    'left-right': [
-      Alignment
-          .bottomRight,
-      Alignment
-          .topLeft,
-    ],
-  };
   void colorset() {
     setState(() {
-      color1 =
-          Random()
-              .nextInt(
-                250,
-              ) +
-          6;
       color2 =
           Random()
               .nextInt(
@@ -143,7 +110,7 @@ class _directiongo
                 directe,
             colors: [
               Color.fromARGB(
-                color1,
+                255,
                 color2,
                 color3,
                 color4,
@@ -155,7 +122,7 @@ class _directiongo
                 255,
               ),
               Color.fromARGB(
-                color1,
+                255,
                 color2,
                 color3,
                 color4,
@@ -170,41 +137,48 @@ class _directiongo
             children: [
               OutlinedButton(
                 onPressed:
-                    setdirection,
-                style: OutlinedButton.styleFrom(
-                  foregroundColor:
-                      Colors.white,
-                ),
-                child: Text(
-                  cdirection,
-                  style: TextStyle(
-                    color: Color.fromARGB(
-                      255,
-                      219,
-                      164,
-                      164,
-                    ),
-                  ),
-                ),
-              ),
-              OutlinedButton(
-                onPressed:
                     colorset,
                 style: OutlinedButton.styleFrom(
-                  foregroundColor:
-                      Colors.white,
+                  side: BorderSide(
+                    color:
+                        Colors.white,
+                  ),
                 ),
                 child: Text(
                   'change color',
                   style: TextStyle(
                     color: Color.fromARGB(
                       255,
-                      217,
-                      147,
-                      226,
+                      255,
+                      255,
+                      255,
                     ),
                   ),
                 ),
+              ),
+              OutlinedButton(
+                onPressed:
+                    setdirection,
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(
+                    color:
+                        Colors.white,
+                  ),
+                ),
+                child: Text(
+                  "change direction",
+                  style: TextStyle(
+                    color: Color.fromARGB(
+                      255,
+                      255,
+                      255,
+                      255,
+                    ),
+                  ),
+                ),
+              ),
+              Text(
+                " Alignment : $cdirection.",
               ),
             ],
           ),
